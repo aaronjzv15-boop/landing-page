@@ -1,0 +1,394 @@
+/* ===============================
+   VARIABLES
+================================ */
+:root {
+    --primary: #0d6efd;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --gray: #6c757d;
+    --bg-soft: #f5f7fb;
+}
+
+/* ===============================
+   RESET BÁSICO
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: var(--dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+    padding-top: 70px; /* navbar fixed */
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--primary) !important;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(120deg, #f8fbff, #eef3ff);
+    padding: 80px 0;
+}
+
+.hero h1 {
+    color: var(--dark);
+}
+
+.hero p {
+    color: var(--gray);
+}
+
+/* ===============================
+   BOTONES
+================================ */
+.btn-primary {
+    background-color: var(--primary);
+    border: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
+
+.btn-outline-secondary {
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ===============================
+   SECCIONES
+================================ */
+section {
+    position: relative;
+}
+
+section h2 {
+    font-size: 2.2rem;
+}
+
+section p {
+    font-size: 1rem;
+}
+
+/* ===============================
+   CARDS
+================================ */
+.card {
+    border: none;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.card h5 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--gray);
+}
+
+/* ===============================
+   CTA
+================================ */
+.bg-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+}
+
+.bg-primary h2,
+.bg-primary p {
+    color: #ffffff;
+}
+
+/* ===============================
+   FORMULARIO
+================================ */
+form .form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ced4da;
+}
+
+form .form-control:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+    font-size: 0.9rem;
+}
+
+footer a {
+    text-decoration: none;
+    opacity: 0.85;
+}
+
+footer a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ===============================
+   ANIMACIONES JS
+================================ */
+.reveal {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+
+/* ===============================
+   WHATSAPP FLOAT BUTTON
+================================ */
+.whatsapp-float {
+    position: fixed;
+    width: 58px;
+    height: 58px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20b954;
+    color: #fff;
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
+}
+
+
+.process-card {
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff;
+}
+
+.process-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.process-number {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0d6efd;
+    opacity: 0.15;
+}
+
+
+/* ===============================
+   UBICACIÓN
+================================ */
+/* ===============================
+   UBICACIÓN VISUAL PREMIUM
+================================ */
+.ubicacion-visual {
+  background: linear-gradient(180deg, #d2e1fd, #ffffff);
+  padding: 90px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 60px auto;
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.ubicacion-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+.card-info {
+  background: #ffffff;
+  padding: 45px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  animation: fadeUp 0.8s ease;
+}
+
+.info-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.info-item .icon {
+  font-size: 2rem;
+}
+
+.info-item h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info-item p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.btn-whatsapp {
+  margin-top: auto;
+  display: inline-block;
+  background: #0d6efd;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,211,102,0.4);
+}
+
+.card-mapa {
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  animation: fadeUp 1s ease;
+}
+
+.card-mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+/* Cuando el collapse está abierto */
+button[aria-expanded="true"] .arrow {
+    transform: rotate(180deg);
+}
+
+/* Animación */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 991px) {
+    .hero {
+        text-align: center;
+    }
+}
+
+@media (max-width: 900px) {
+  .ubicacion-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
