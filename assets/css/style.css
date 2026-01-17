@@ -55,9 +55,11 @@ body {
    HERO
 ================================ */
 .hero {
-    min-height: 90vh;
+    min-height: 75vh;
+    padding-top: 75px;
     background: linear-gradient(120deg, #f8fbff, #eef3ff);
-    padding: 80px 0;
+    padding-bottom: 20px;
+    padding: 75px 0;
 }
 
 .hero h1 {
