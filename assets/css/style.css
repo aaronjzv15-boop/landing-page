@@ -35,6 +35,7 @@ body {
 ================================ */
 .navbar {
     transition: all 0.3s ease;
+    margin-bottom: 0 !important;
 }
 
 .navbar-brand {
@@ -68,6 +69,51 @@ body {
 
 .hero p {
     color: var(--gray);
+}
+
+.hero .container {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+
+/* Solo afecta al Index */
+#hero-index {
+    
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    background-image: url('../img/banner_principal.png'); /* Verifica que la ruta sea correcta */
+    background-size: cover; /* Cubre todo el espacio disponible */
+    background-position: center right; /* Alinea la laptop a la derecha */
+    background-repeat: no-repeat;
+    padding-top: 80px; /* Espacio para el Navbar fixed */
+    background-color: #f8fbff; /* Color de respaldo */
+}
+
+/* Ajustes de texto específicos para el Index */
+#hero-index h1 {
+    color: #333;
+    max-width: 500px;
+}
+
+#hero-index p {
+    color: #555;
+    max-width: 450px;
+}
+
+/* Responsivo: En móviles centramos todo para mejor lectura */
+@media (max-width: 991px) {
+    #hero-index {
+        background-position: 75% center; /* Muestra más de la laptop de fondo */
+        text-align: center !important;
+    }
+    #hero-index .col-lg-6 {
+        background-color: rgba(255, 255, 255, 0.85); /* Capa clara para leer sobre la imagen */
+        padding: 40px 20px;
+        border-radius: 20px;
+        margin: 20px;
+    }
 }
 
 /* ===============================
