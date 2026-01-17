@@ -51,16 +51,15 @@ body {
 .nav-link:hover {
     color: var(--primary) !important;
 }
-
 /* ===============================
-   HERO
+   HERO (General para todas las páginas)
 ================================ */
 .hero {
     min-height: 75vh;
-    padding-top: 75px;
+    padding: 75px 0; /* Relleno estándar */
     background: linear-gradient(120deg, #f8fbff, #eef3ff);
-    padding-bottom: 20px;
-    padding: 75px 0;
+    display: flex;
+    align-items: center;
 }
 
 .hero h1 {
@@ -71,51 +70,78 @@ body {
     color: var(--gray);
 }
 
-.hero .container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-
-/* Solo afecta al Index */
+/* ===============================
+   HERO INDEX (Optimizado y Responsive)
+================================ */
 #hero-index {
-    
     width: 100%;
+    min-height: 600px; /* Altura para monitores */
     margin-top: 0 !important;
-    padding-top: 0 !important;
-    background-image: url('../img/banner_principal.png'); /* Verifica que la ruta sea correcta */
-    background-size: cover; /* Cubre todo el espacio disponible */
-    background-position: center right; /* Alinea la laptop a la derecha */
+    padding-top: 80px; /* Alineación con el Header fijo */
+    
+    background-image: url('../img/banner_principal.png');
     background-repeat: no-repeat;
-    padding-top: 80px; /* Espacio para el Navbar fixed */
-    background-color: #f8fbff; /* Color de respaldo */
+    background-color: #f8fbff; /* Color que iguala el fondo de tu oficina */
+    
+    /* Configuración para PC: imagen a la derecha sin cortes */
+    background-size: 100% auto;
+    background-position: right center;
+    
+    display: flex;
+    align-items: center;
 }
 
-/* Ajustes de texto específicos para el Index */
+/* Texto alineado a la izquierda en PC */
 #hero-index h1 {
     color: #333;
     max-width: 500px;
+    text-align: left;
 }
 
 #hero-index p {
     color: #555;
     max-width: 450px;
+    text-align: left;
 }
 
-/* Responsivo: En móviles centramos todo para mejor lectura */
+/* AJUSTES PARA TABLETS */
+@media (max-width: 1200px) {
+    #hero-index {
+        min-height: 500px;
+        background-size: 55%; /* La imagen se ajusta para no tapar el texto */
+    }
+}
+
+/* AJUSTES PARA MÓVILES (Celulares) */
 @media (max-width: 991px) {
     #hero-index {
-        background-position: 75% center; /* Muestra más de la laptop de fondo */
-        text-align: center !important;
+        background-position: center bottom; /* Laptop abajo del texto */
+        background-size: 90%; 
+        min-height: 100vh; 
+        text-align: center;
+        padding-bottom: 350px; /* Espacio para que la laptop no se tape */
     }
+
+    /* CAPA CLARA: Solo se activa en móviles para facilitar la lectura */
     #hero-index .col-lg-6 {
-        background-color: rgba(255, 255, 255, 0.85); /* Capa clara para leer sobre la imagen */
-        padding: 40px 20px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 30px 20px;
         border-radius: 20px;
-        margin: 20px;
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+    }
+    
+    #hero-index h1, #hero-index p {
+        text-align: center !important; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hero-index h1 {
+        font-size: 1.8rem;
     }
 }
-
 /* ===============================
    BOTONES
 ================================ */
