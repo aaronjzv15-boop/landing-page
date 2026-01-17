@@ -75,20 +75,22 @@ body {
 ================================ */
 #hero-index {
     width: 100%;
-    min-height: 600px; /* Altura para monitores */
+   
     margin-top: 0 !important;
-    padding-top: 80px; /* Alineación con el Header fijo */
-    
+   
     background-image: url('../img/banner_principal.png');
     background-repeat: no-repeat;
-    background-color: #f8fbff; /* Color que iguala el fondo de tu oficina */
-    
-    /* Configuración para PC: imagen a la derecha sin cortes */
-    background-size: 100% auto;
-    background-position: right center;
-    
+    background-color: #f8fbff;
+    background-size: contain;
+    background-position: center top;
     display: flex;
     align-items: center;
+}
+
+
+.btns-group {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
 }
 
 /* Texto alineado a la izquierda en PC */
@@ -115,14 +117,28 @@ body {
 /* AJUSTES PARA MÓVILES (Celulares) */
 @media (max-width: 991px) {
     #hero-index {
-        background-position: center bottom; /* Laptop abajo del texto */
-        background-size: 90%; 
-        min-height: 100vh; 
+        background-image: none; /* Quitamos el fondo para usar la imagen de arriba */
+        min-height: auto;
+        padding: 100px 0 50px 0;
         text-align: center;
-        padding-bottom: 350px; /* Espacio para que la laptop no se tape */
     }
 
     /* CAPA CLARA: Solo se activa en móviles para facilitar la lectura */
+
+
+    .btns-group {
+        flex-direction: column; /* Uno sobre otro */
+        align-items: center;
+        gap: 20px; /* Más espacio entre ellos */
+        margin-top: 30px !important;
+    }
+
+    .btns-group .btn {
+        width: 100%;
+        max-width: 280px; /* Para que no sean gigantes */
+    }
+
+
     #hero-index .col-lg-6 {
         background-color: rgba(255, 255, 255, 0.9); 
         padding: 30px 20px;
@@ -138,8 +154,9 @@ body {
         margin-right: auto;
     }
 
-    #hero-index h1 {
+   #hero-index h1 {
         font-size: 1.8rem;
+        margin-bottom: 15px;
     }
 }
 /* ===============================
